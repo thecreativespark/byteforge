@@ -13,15 +13,13 @@ vector<int> unqvec(vector<int> nunq){
             }
         }
         if(isunq==true){
-            unq.push_back(nunq[i]);
+            unq[k]=nunq[i];
             k++;
         }
     }
     vector<int> runq(k);
-    int j=0;
     for(int i=0; i<k;i++){
-        runq[j] = unq[unq.size()-1-i];
-        j++;
+        runq[i]=unq[i];
     }
     return runq;
 }
