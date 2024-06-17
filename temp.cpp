@@ -1,6 +1,9 @@
 #include <iostream>
 #include <vector>
-using std::cin, std::cout, std::vector;
+
+using std::cin;
+using std::cout;
+using std::vector;
 
 vector<int> unqvec(vector<int> nunq){
     vector<int> unq(nunq.size());
@@ -25,43 +28,6 @@ vector<int> unqvec(vector<int> nunq){
     }
     return runq;
 }
-
-//Max of an array
-int max(vector<int> a){
-    int max=a[0];
-    for(int i=0; i<=a.size(); i++){
-        if(a[i]>max){
-            max = a[i];
-        }
-    }
-    return max;
-}
-
-//Min of an array
-int min(vector<int> a){
-    int min=a[0];
-    for(int i=0; i<=a.size(); i++){
-        if(a[i]<min){
-            min = a[i];
-        }
-    }
-    return min;
-}
-
-//Average of an array
-float avg(vector<int> a){
-    float sum=0;
-    for(int i=0; i<=a.size(); i++){
-        sum+=a[i];   
-    }
-    return sum/a.size();
-}
-
-// how to do this any idea???nooo 
-// hmm let's think, if you get any ideas keep telling them what is the question?
-
-//we need to write a function that returns the mode value of a given int array
-// mode if the most frequently occuring element in the array
 
 typedef struct{
     int element;
@@ -92,4 +58,14 @@ int mode(vector<int> a){
         }
     }
     return mode;
+}
+
+int main(){
+    vector<int> nunq = {1,2,3,4,2,4,2,2,5,2,2,7,9,5,8};
+    vector<int> unq = unqvec(nunq);
+    for(int i=0; i<unq.size(); i++){
+        cout << unq[i];
+    }
+    cout << "\n" << mode(nunq);
+    return 0;
 }
