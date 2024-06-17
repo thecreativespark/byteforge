@@ -57,11 +57,6 @@ float avg(vector<int> a){
     return sum/a.size();
 }
 
-// how to do this any idea???nooo 
-// hmm let's think, if you get any ideas keep telling them what is the question?
-
-//we need to write a function that returns the mode value of a given int array
-// mode if the most frequently occuring element in the array
 
 typedef struct{
     int element;
