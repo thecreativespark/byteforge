@@ -63,9 +63,10 @@ int mode(vector<int> a){
 int main(){
     vector<int> nunq = {1,2,3,4,2,4,2,2,5,2,2,7,9,5,8};
     vector<int> unq = unqvec(nunq);
+    cout << "Unique Elements are: ";
     for(int i=0; i<unq.size(); i++){
         cout << unq[i];
     }
-    cout << "\n" << mode(nunq);
+    cout << "\n" << "Mode = " << mode(nunq);
     return 0;
 }
